@@ -1,0 +1,5 @@
+# Install PyTorch first (CUDA 12.x for RTX 5090):
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+
+python-chess>=1.999
+numpy>=1.24
