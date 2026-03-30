@@ -397,8 +397,15 @@ def pretrain(model, optimizer, scaler, device, epochs=6):
             total_v += value_loss.item()
             num_batches += 1
 
+            if num_batches % 500 == 0:
+                elapsed_so_far = time.time() - t0
+                print(f"    batch {num_batches:5d} | "
+                      f"policy: {total_p/num_batches:.4f}  "
+                      f"value: {total_v/num_batches:.4f}  "
+                      f"({elapsed_so_far:.0f}s elapsed)")
+
         elapsed = time.time() - t0
-        print(f"  Epoch {epoch}/{epochs} — "
+        print(f"  Epoch {epoch}/{epochs} done — "
               f"policy: {total_p/num_batches:.4f}  "
               f"value: {total_v/num_batches:.4f}  "
               f"({elapsed:.0f}s)")
