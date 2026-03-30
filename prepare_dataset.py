@@ -118,7 +118,7 @@ def parse_pgn(pgn_paths, output_dir, max_games=None):
 
         for pgn_path in pgn_paths:
             print(f"Parsing {pgn_path}...")
-            with open(pgn_path) as f:
+            with open(pgn_path, encoding='utf-8', errors='ignore') as f:
                 while True:
                     game = chess.pgn.read_game(f)
                     if game is None:
