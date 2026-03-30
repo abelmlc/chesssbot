@@ -1,0 +1,26 @@
+{
+  "iteration": 4,
+  "mcts_sims": 420,
+  "learning_rate": 0.00029999849955653985,
+  "policy_loss": 0.7929206160788841,
+  "value_loss": 0.05993649926274381,
+  "total_loss": 0.8528571153416279,
+  "results": {
+    "white": 77,
+    "black": 71,
+    "draw": 52
+  },
+  "terminations": {
+    "ADJUDICATION": 63,
+    "CHECKMATE": 85,
+    "THREEFOLD_REPETITION": 51,
+    "INSUFFICIENT_MATERIAL": 1
+  },
+  "avg_game_length": 79.015,
+  "total_positions": 15395,
+  "buffer_size": 48019,
+  "cycle_time_seconds": 546.0746343135834,
+  "avg_game_time_seconds": 1.4237229108810425,
+  "v1_win_rate": 0.335,
+  "stockfish_survival_moves": null
+}
